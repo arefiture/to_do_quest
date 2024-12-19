@@ -7,7 +7,7 @@ SECRET_KEY = 'django-insecure-yw=v9eq#x+o54)vkbq228y8qg-!&99p^8$nw=07nfnro1*tooo
 
 DEBUG = True
 
-ALLOWED_HOSTS = ['localhost', '172.0.0.1']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 
 
 INSTALLED_APPS = [
@@ -75,6 +75,12 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+}
 
 LANGUAGE_CODE = 'ru-RU'
 
