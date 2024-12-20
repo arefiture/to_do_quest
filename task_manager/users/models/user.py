@@ -1,5 +1,3 @@
-import importlib
-
 from django.apps import apps
 from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
 from django.contrib.auth.hashers import make_password
@@ -8,35 +6,7 @@ from django.core.mail import send_mail
 from django.db import models
 from django.utils import timezone
 
-from core.models import PrefixedDBModel
-
-
-class AuthBaseModel(PrefixedDBModel):
-    """
-    Заготовка для моделей, связанных с пользователями.
-
-    С помощью PrefixedDBModel.__init_subclass__ назначает
-    новый префикс для таблиц (вместо users значение из AUTH).
-    """
-
-    @classmethod
-    def set_prefix_name(cls):
-        """Устанавливает префикс если есть настройка, иначе - дефолт."""
-        try:
-            # Проверяем наличие константы AUTH в приложении users
-            tasks_module = importlib.import_module('users.constants')
-            prefix = getattr(tasks_module, 'AUTH', None)
-            if prefix:
-                cls.prefix_name = prefix
-                return None
-        except ModuleNotFoundError:
-            pass
-
-        # Если AUTH не найдено, используем префикс по умолчанию
-        super().set_prefix_name()
-
-    class Meta(PrefixedDBModel.Meta):
-        abstract = True
+from users.models.abstract import AuthBaseModel
 
 
 class UserManager(BaseUserManager):
