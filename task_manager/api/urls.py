@@ -2,9 +2,10 @@ from django.urls import path
 from rest_framework.routers import DefaultRouter
 from rest_framework_simplejwt import views as jwt_views
 
-from api.views import RegisterView, UserViewSet
+from api.views import RegisterView, TaskViewSet, UserViewSet
 
 router = DefaultRouter()
+router.register(r'tasks', TaskViewSet, basename='task')
 router.register(r'users', UserViewSet, basename='user')
 
 
