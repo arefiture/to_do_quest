@@ -25,7 +25,11 @@ class Task(TaskBaseModel):
         null=True
     )
     date_start = models.DateTimeField(
-        verbose_name='Дата создания задачи',
+        verbose_name='Дата и время, когда нужно начать задачу',
+        null=True
+    )
+    date_add = models.DateTimeField(
+        verbose_name='Дата создании задачи',
         auto_now_add=True
     )
     date_upd = models.DateTimeField(
@@ -33,7 +37,7 @@ class Task(TaskBaseModel):
         auto_now=True
     )
     date_end = models.DateTimeField(
-        verbose_name='Дата закрытия задачи',
+        verbose_name='Дата и время, когда задача должна быть выполнена',
         null=True
     )
     recurrence = models.ForeignKey(

@@ -1,7 +1,11 @@
 from django.urls import path
+from rest_framework.routers import DefaultRouter
 from rest_framework_simplejwt import views as jwt_views
 
-from api.views import RegisterView
+from api.views import RegisterView, UserViewSet
+
+router = DefaultRouter()
+router.register(r'users', UserViewSet, basename='user')
 
 
 urlpatterns = [
@@ -18,3 +22,4 @@ urlpatterns = [
         name='token_refresh'
     )
 ]
+urlpatterns += router.urls

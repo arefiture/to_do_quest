@@ -1,3 +1,4 @@
+from datetime import timedelta
 from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -75,6 +76,13 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(hours=3),  # Время жизни access-токена
+    'REFRESH_TOKEN_LIFETIME': timedelta(days=7),    # Время жизни refresh-токена
+    'ROTATE_REFRESH_TOKENS': False,                # Обновление refresh-токена при его использовании
+    'BLACKLIST_AFTER_ROTATION': True,              # Блокировка старого refresh-токена после его ротации
+}
 
 REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
