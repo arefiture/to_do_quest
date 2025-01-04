@@ -1,0 +1,27 @@
+[
+    {
+      "id": 1,
+      "name": "Создано",
+      "slug": "created"
+    },
+    {
+      "id": 2,
+      "name": "В процессе выполнения",
+      "slug": "in_progress"
+    },
+    {
+      "id": 3,
+      "name": "Выполнено",
+      "slug": "completed"
+    },
+    {
+      "id": 4,
+      "name": "Просрочено",
+      "slug": "overdue"
+    },
+    {
+      "id": 5,
+      "name": "Закрыто",
+      "slug": "closed"
+    }
+  ]

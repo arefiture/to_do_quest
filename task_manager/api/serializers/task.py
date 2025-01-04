@@ -2,12 +2,12 @@ from django.contrib.auth import get_user_model
 from django.shortcuts import get_object_or_404
 from rest_framework import serializers
 
-from api.serializers import (
+from api.serializers.directoriest import (
     DifficultySerializer,
     PrioritySerializer,
-    RecurrenceSerializer,
-    UserSerializer
+    RecurrenceSerializer
 )
+from api.serializers.user import UserSerializer
 from tasks.models import (
     Difficulty,
     HistoryTask,

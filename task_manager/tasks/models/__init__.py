@@ -3,7 +3,9 @@ from tasks.models.directories import (
 )
 from tasks.models.history_task import HistoryTask
 from tasks.models.task import Task
+from tasks.models.transition_status import StatusTransition
 
 __all__ = [
-    'Difficulty', 'Priority', 'Recurrence', 'Status', 'HistoryTask', 'Task'
+    'Difficulty', 'Priority', 'Recurrence', 'Status', 'StatusTransition',
+    'HistoryTask', 'Task'
 ]

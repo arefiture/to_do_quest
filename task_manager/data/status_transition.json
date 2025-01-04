@@ -1,0 +1,14 @@
+[
+    {
+        "current_status": 1,
+        "next_status": 2
+    },
+    {
+        "current_status": 1,
+        "next_status": 5
+    },
+    {
+        "current_status": 2,
+        "next_status": 5
+    }
+]

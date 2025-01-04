@@ -1,0 +1,58 @@
+[
+    {
+      "name": "Единоразово",
+      "slug": "one_time"
+    },
+    {
+      "name": "Ежедневно",
+      "slug": "daily"
+    },
+    {
+      "name": "Еженедельно",
+      "slug": "weekly"
+    },
+    {
+      "name": "Ежемесячно",
+      "slug": "monthly"
+    },
+    {
+      "name": "Ежегодно",
+      "slug": "yearly"
+    },
+    {
+      "name": "Только в будние дни",
+      "slug": "weekdays"
+    },
+    {
+      "name": "Только в выходные",
+      "slug": "weekends"
+    },
+    {
+      "name": "Каждый понедельник",
+      "slug": "monday"
+    },
+    {
+      "name": "Каждый вторник",
+      "slug": "tuesday"
+    },
+    {
+      "name": "Каждую среду",
+      "slug": "wednesday"
+    },
+    {
+      "name": "Каждый четверг",
+      "slug": "thursday"
+    },
+    {
+      "name": "Каждую пятницу",
+      "slug": "friday"
+    },
+    {
+      "name": "Каждую субботу",
+      "slug": "saturday"
+    },
+    {
+      "name": "Каждое воскресенье",
+      "slug": "sunday"
+    }
+  ]

@@ -1,0 +1,22 @@
+[
+    {
+      "name": "Очень легкий",
+      "slug": "very_easy"
+    },
+    {
+      "name": "Легкий",
+      "slug": "easy"
+    },
+    {
+      "name": "Средний",
+      "slug": "medium"
+    },
+    {
+      "name": "Сложный",
+      "slug": "hard"
+    },
+    {
+      "name": "Очень сложный",
+      "slug": "very_hard"
+    }
+  ]
