@@ -2,7 +2,7 @@ from django.contrib.auth import get_user_model
 from django.db import models
 
 from tasks.models.abstract import TaskBaseModel
-from tasks.models.directories import Difficulty, Priority, Recurrence
+from tasks.models.directories import Difficulty, Priority, Recurrence, Status
 
 User = get_user_model()
 
@@ -54,6 +54,12 @@ class Task(TaskBaseModel):
         to=Difficulty,
         on_delete=models.CASCADE,
         verbose_name='Сложность задачи'
+    )
+    current_status = models.ForeignKey(
+        to=Status,
+        on_delete=models.CASCADE,
+        verbose_name='Текущий статус',
+        default=1
     )
 
     class Meta(TaskBaseModel.Meta):

@@ -52,8 +52,9 @@ class TaskSerializer(serializers.ModelSerializer):
         ]
 
     def create(self, validated_data):
-        task = super().create(validated_data=validated_data)
         status = get_object_or_404(Status, slug=CREATED_STATUS)
+        validated_data['current_status'] = status
+        task = super().create(validated_data=validated_data)
         HistoryTask.objects.create(
             task=task,
             author=self.author,
